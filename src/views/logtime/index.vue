@@ -15,6 +15,7 @@ export default {
             )
             this.data = await res.json()
             console.log(this.data)
+            console.log(this.props)
         },
     },
     mounted() {
@@ -35,7 +36,7 @@ export default {
                         <p
                             class="card-text"
                         >{{ e.company.bs }}</p>
-                        <router-link to="/" class="btn btn-primary">More</router-link>
+                        <router-link :to="`/logtime/${e.id}`" class="btn btn-primary">More</router-link>
                         <!-- <router-link to="/">Test</router-link> -->
                     </div>
                 </div>

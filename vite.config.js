@@ -8,6 +8,7 @@ import Pages from 'vite-plugin-pages'
 export default defineConfig({
   plugins: [vue(), Pages({
     dirs: 'src/views',
+    nuxtStyle: true
   })],
   resolve: {
     alias: {

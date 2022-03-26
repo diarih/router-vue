@@ -14,8 +14,6 @@ export default {
                 API_URL
             )
             this.data = await res.json()
-            console.log(this.data)
-            console.log(this.props)
         },
     },
     mounted() {

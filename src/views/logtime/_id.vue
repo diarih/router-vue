@@ -3,7 +3,7 @@ const API_URL = "https://jsonplaceholder.typicode.com/users"
 export default {
     data() {
         return {
-            data: null
+            data: []
         }
     },
     props: ['id'],
@@ -11,21 +11,20 @@ export default {
         async fetchData() {
             const res = await fetch(`${API_URL}/${this.id}`)
             this.data = await res.json()
-            console.log(this.data)
+            console.log(this.data);
 
         },
     },
     mounted() {
         this.fetchData()
-        console.log(this.id)
     }
 }
 </script>
 
 <template>
     <div>
-        <pre>
-         {{ this.data }}
-        </pre>
+        <h1>{{ data.name }}</h1>
+        <h3>{{ data.username }}</h3>
+        <h5>{{ data.email }}</h5>
     </div>
 </template>
